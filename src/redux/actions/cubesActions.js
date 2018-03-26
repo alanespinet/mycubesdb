@@ -1,3 +1,14 @@
+import axios from 'axios';
+
+
+export const startSetCubes = () => {
+  return (dispatch) => {
+    return axios.get('/data/data.json')
+      .then( (response) => { dispatch(setCubes(response.data.cubes)) })
+      .catch( (error) => console.log(error) );
+  }
+}
+
 export const setCubes = ( cubes ) => ({
   type: 'SET_CUBES',
   cubes: cubes

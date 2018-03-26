@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 
 import CubeList from './CubeList';
 import CubeSingle from './CubeSingle';
 import AlgorithmSingle from './AlgorithmSingle';
 
+export const history = createHistory();
 
 class App extends React.Component {
 
@@ -12,17 +14,16 @@ class App extends React.Component {
     return (
       <div>
         <h1>App</h1>
-        <BrowserRouter>
+        <Router history={history}>
           <div>
-            <Route path="/" exact={true} component={CubeList} />
+            <Route path="/cubes" exact={true} component={CubeList} />
             <Route path="/cubes/:id" exact={true} component={CubeSingle} />
             <Route path="/cubes/:cid/:aid" exact={true} component={AlgorithmSingle} />
           </div>
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }
-
 
 }
 
