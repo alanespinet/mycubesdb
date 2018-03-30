@@ -5,6 +5,9 @@ import createHistory from 'history/createBrowserHistory';
 import CubeList from './CubeList';
 import CubeSingle from './CubeSingle';
 import AlgorithmSingle from './AlgorithmSingle';
+import Hero from './Hero';
+import Header from './Header';
+import Footer from './Footer';
 
 export const history = createHistory();
 
@@ -13,7 +16,8 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <h1>App</h1>
+        <Hero />
+        <Header />
         <Router history={history}>
           <div>
             <Route path="/cubes" exact={true} component={CubeList} />
@@ -21,6 +25,7 @@ class App extends React.Component {
             <Route path="/cubes/:cid/:aid" exact={true} component={AlgorithmSingle} />
           </div>
         </Router>
+        <Footer />
       </div>
     );
   }

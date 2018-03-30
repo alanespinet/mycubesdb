@@ -16,9 +16,11 @@ class AlgorithmSingle extends React.Component {
 
     const alg = this.props.cube.cube_algorithms.filter( alg => alg.algorithm_id === active_alg_id )[0];
     return (
-      <div>
-        <AlgorithmInfo alg={alg} />
-        <CasesList cases={alg.algorithm_cases} />
+      <div className="algorithm-single">
+        <div className="container">
+          <AlgorithmInfo alg={alg} />
+          <CasesList cases={alg.algorithm_cases} />
+        </div>
       </div>
     );
   }

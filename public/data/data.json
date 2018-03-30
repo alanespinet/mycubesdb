@@ -3,38 +3,76 @@
       {
          "cube_id":"x3cube",
          "cube_title":"3 x 3 x 3 (classic)",
-         "cube_image":"/images/placeholder_cube.jpg",
-         "cube_description":"lorem ipsum cube description text",
+         "cube_image":"/images/placeholder_cube.png",
+         "cube_description":"This is the classic 3 x 3 x 3 cube.",
          "cube_algorithms":[
             {
-               "algorithm_id":"pll",
-               "algorithm_title":"PLL",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_id":"oll",
+               "algorithm_title":"OLL - Orient Last Layer",
+               "algorithm_description":"This algorithm orientates the last layer (conventionally yellow) in a way that, at the end, the whole face of the layer is correctly placed but (commonly) incorrectly positioned (edges and/or corners may not be placed in their slots). The cases shown here supose the yellow cross is already done.",
                "algorithm_cases":[
                   {
-                     "case_name":"pez arriba",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
+                     "case_name":"Fish facing Up",
+                     "case_image":"/images/oll/fishUp.png",
+                     "case_explanation":"",
                      "case_moves":"R 2U R' U' R U' R'"
-                  },
-                  {
-                     "case_name":"pez abajo",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
+                  }, {
+                     "case_name":"Fish facing Down",
+                     "case_image":"/images/oll/fishDown.png",
+                     "case_explanation":"",
                      "case_moves":"R U R' U R 2U R'"
+                  }, {
+                     "case_name":"Lasso",
+                     "case_image":"/images/oll/lasso.png",
+                     "case_explanation":"",
+                     "case_moves":"L' U' L U' B U' L' U' L U B'"
+                  }, {
+                     "case_name":"Lego facing Front",
+                     "case_image":"/images/oll/legoFront.png",
+                     "case_explanation":"",
+                     "case_moves":"R 2U R' B' U R U R' U' B"
+                  }, {
+                     "case_name":"Lego facing Left",
+                     "case_image":"/images/oll/legoSide.png",
+                     "case_explanation":"",
+                     "case_moves":"L F R' F' L' F R F'"
+                  }, {
+                     "case_name":"Natural Yellow Cross",
+                     "case_image":"/images/oll/naturalCross.png",
+                     "case_explanation":"This is not a patron by itself that can be solved with a single algorithm. To solve it, first it must be converted to any of the other 5 cases. To do this, use the Fish facing Up algorithm and then resolve the resulting case.",
+                     "case_moves":"R 2U R' U' R U' R'"
                   }
                ]
-            },
-            {
-               "algorithm_id":"oll",
-               "algorithm_title":"OLL",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+            }, {
+               "algorithm_id":"pll",
+               "algorithm_title":"PLL - Permutate Last Layer",
+               "algorithm_description":"This algorithm is applied after OLL, and its goal is to place the right way the edges and/or corners left behind by OLL.",
                "algorithm_cases":[
                   {
-                     "case_name":"intercambio frontal",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"R 2U R' U' R U' R'"
+                     "case_name":"Corners Position",
+                     "case_image":"/images/pll/corners.png",
+                     "case_explanation":"The first step is to place the corners the right way. Turn the last layer until (at least) the corner colors of one face match that face color (can result in a whole face color match as well). Now look at the other faces. If all of them follow the same criteria (their corners color matches the face color) this step can be ignored. In any other case, apply the algorithm with the matching color face facing front to you. If no face has matching corners colors, apply the algoritm with any face front to you. It will result in, at least, one matching face. Then apply the algorithm again over that resulting matching face. At the end of this algorithm, one of the following three cases is reached: solved cube, one face done and three wrong edges, all wrong edges. Corners are all well placed.",
+                     "case_moves":"L' B L' 2F L B' L' 2F 2L"
+                  }, {
+                     "case_name":"Clockwise Permutation",
+                     "case_image":"/images/pll/clockwisePermutation.png",
+                     "case_explanation":"One face is done and the other three have the edges wrong placed in a way that can be fixed if they are switched 1 step clockwise (jumping over the done face). The algorithm is applied with the done face facing front to you.",
+                     "case_moves":"R' U R' U' R' U' R' U R U 2R"
+                  }, {
+                     "case_name":"Counter-Clockwise Permutation",
+                     "case_image":"/images/pll/conter_clockwisePermutation.png",
+                     "case_explanation":"One face is done and the other three have the edges wrong placed in a way that can be fixed if they are switched 1 step counter-clockwise (jumping over the done face). The algorithm is applied with the done face facing front to you.",
+                     "case_moves":"2R U' R' U' R U R U R U' R"
+                  }, {
+                     "case_name":"Diagonal Interchange",
+                     "case_image":"/images/pll/diagonalInterchange.png",
+                     "case_explanation":"The edges are wrong in a way that can be fixed if they are interchanged diagonally. The algorithm is applied with a diagonally interchange placed to the left. In this algorithm, M has the same direction than L.",
+                     "case_moves":"2M U' 2M U' M' 2U 2M 2U M'"
+                  }, {
+                     "case_name":"Frontal Interchange",
+                     "case_image":"/images/pll/frontalInterchange.png",
+                     "case_explanation":"The edges are wrong in a way that can be fixed if they are interchanged frontally. The algorithm is applied with a any face front to you.",
+                     "case_moves":"2M U 2M 2U 2M U 2M"
                   }
                ]
             }
@@ -43,19 +81,19 @@
       {
          "cube_id":"x2cube",
          "cube_title":"2 x 2 x 2",
-         "cube_image":"/images/placeholder_cube.jpg",
+         "cube_image":"/images/placeholder_cube.png",
          "cube_description":"lorem ipsum cube description text",
          "cube_algorithms":[
             {
-               "algorithm_id":"lastlayer",
-               "algorithm_title":"Last layer",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_id":"finalization",
+               "algorithm_title":"Cube Finalization",
+               "algorithm_description":"",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/two/t2x2.png",
+                     "case_explanation":"This algorithm is applied when the white and yellow faces are done. If a completed face (apart from white and yellow) is found, use it as the front with the yellow one in the top. After completing the algorithm, the cube will be done. If no completed face is present, apply the algorithm using any non-completed face as the front. This will generate a completed face somewhere. Then, use that completed face and apply the algorithm again to solve the cube.",
+                     "case_moves":"L' B L' 2F L B' L' 2F 2L"
                   }
                ]
             }
@@ -64,45 +102,45 @@
       {
          "cube_id":"x4cube",
          "cube_title":"4 x 4 x 4",
-         "cube_image":"/images/placeholder_cube.jpg",
+         "cube_image":"/images/placeholder_cube.png",
          "cube_description":"lorem ipsum cube description text",
          "cube_algorithms":[
             {
                "algorithm_id":"p4me",
                "algorithm_title":"Parity One - Mixed Edges",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_description":"",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/four/parity_one.png",
+                     "case_explanation":"This algorithm is applied when all edges are completed but two. The goal is to interchange one half of each edge to get them completed. Incomplete edges colors should match one to another when they are seen from above.",
+                     "case_moves":"r' U' R' U F' U F U' r"
                   }
                ]
             },
             {
                "algorithm_id":"p4yc",
                "algorithm_title":"Parity Two - Yellow Cross",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_description":"This algoritm applies too for 5x5x5, 6x6x6, 7x7x7, etc, but solving other problems",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/four/parity_two.png",
+                     "case_explanation":"This algorithm is applied to fix the broken yellow cross that happens in even cubes from 4x4x4. Choose as front the part of the cross you want to fix.",
+                     "case_moves":"2(Rr) 2B 2U (Ll) 2U (Rr)' 2U (Rr) 2U 2F (Rr) 2F (Ll)' 2B 2(Rr)"
                   }
                ]
             },
             {
                "algorithm_id":"p4c",
                "algorithm_title":"Parity Three - Corners",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_description":"",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/four/parity_three.png",
+                     "case_explanation":"This algorithm is applied to fix the problem when you find 2 corners correct and 2 incorrect that happens in even cubes from 4x4x4. To apply it: first, the cube was reduced to a 3x3x3; second, F2L and the Yellow Cross was completed; third, the Yellow Cross was oriented. Now, if two corners are perfectly positioned but the other two are not (this case does not happen in odd cubes), this algorithm should solve the problem. WARNING: after completed this algorithm, the Yellow Cross orientation is broken and must be fixed.",
+                     "case_moves":"2r 2U 2r 2(Uu) 2r 2(Uu)"
                   }
                ]
             }
@@ -111,32 +149,32 @@
       {
          "cube_id":"x5cube",
          "cube_title":"5 x 5 x 5",
-         "cube_image":"/images/placeholder_cube.jpg",
+         "cube_image":"/images/placeholder_cube.png",
          "cube_description":"lorem ipsum cube description text",
          "cube_algorithms":[
             {
                "algorithm_id":"p5me",
-               "algorithm_title":"Parity One - Mixed Edges",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_title":"Parity One - Mixed Edge Colors",
+               "algorithm_description":"This algoritm applies too for 4x4x4 (Yellow Cross), 6x6x6, 7x7x7, etc.",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/five/parity_one.png",
+                     "case_explanation":"This case can happen when all edges are done but two and one of them (or both) present the middle piece incorrecty oriented. To apply this algorithm, the problematic edge should be on the top-front. If both edges have the central piece bad-oriented, the algorithm must be applied twice: once for each edge",
+                     "case_moves":"2(Rr) 2B 2U (Ll) 2U (Rr)' 2U (Rr) 2U 2F (Rr) 2F (Ll)' 2B 2(Rr)"
                   }
                ]
             },
             {
                "algorithm_id":"p5ei",
-               "algorithm_title":"Parity Two - Edges Interchange",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_title":"Parity Two - Partial Edge Interchange",
+               "algorithm_description":"",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/five/parity_two.png",
+                     "case_explanation":"This case can happen when all edges are done but two and they have switched pieces in each edge that belong to the other. To apply this algorithm, the pieces that you want to switch must be up - front and right.",
+                     "case_moves":"(Ll)' 2U (Ll)' 2U 2F (Ll)' 2F (Rr) 2U (Rr)' 2U 2(Ll)"
                   }
                ]
             }
@@ -145,58 +183,58 @@
       {
          "cube_id":"x6cube",
          "cube_title":"6 x 6 x 6",
-         "cube_image":"/images/placeholder_cube.jpg",
+         "cube_image":"/images/placeholder_cube.png",
          "cube_description":"lorem ipsum cube description text",
          "cube_algorithms":[
             {
-               "algorithm_id":"p6me",
-               "algorithm_title":"Parity One - Mixed Edges",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_id":"p6ei",
+               "algorithm_title":"Parity One - Partial Edge Interchange",
+               "algorithm_description":"In this algorithm, L and R are relative to each other, and are always in the middle 4 lines. If L is the most left line of the 4-based center, R will be the most right line. If L is the most inner left line from the center, R will be the most inner right from the center.",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/five/parity_two.png",
+                     "case_explanation":"This case can happen when all edges are done but two and they have switched pieces in each edge that belong to the other. To apply this algorithm, the pieces that you want to switch must be up - front and right.",
+                     "case_moves":"L' 2U L' 2U 2F L' 2F R 2U R' 2U 2L"
                   }
                ]
             },
             {
-               "algorithm_id":"p6ei",
-               "algorithm_title":"Parity Two - Edges Interchange",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_id":"p6me",
+               "algorithm_title":"Parity Two - Mixed Edge Colors",
+               "algorithm_description":"In this algorithm, R and L point only to the most external layer. (Rr) and (Ll) point to the two right and two left layers both together, respectively",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/six/parity_two.png",
+                     "case_explanation":"This case can happen when all edges are done but two and one of them (or both) present the pieces incorrecty oriented. To apply this algorithm, the problematic edge should be on the top-front and in the right side.",
+                     "case_moves":"2(Rr) 2B 2U (Ll) 2U (Rr)' 2U (Rr) 2U 2F (Rr) 2F (Ll)' 2B 2(Rr)"
                   }
                ]
             },
             {
                "algorithm_id":"p6yc",
                "algorithm_title":"Parity Three - Yellow Cross",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_description":"In this algorithm, R and L point only to the most external layer. (Rr) and (Ll) point to the three right and three left layers all together, respectively",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/four/parity_two.png",
+                     "case_explanation":"This algorithm is applied to fix the broken yellow cross that happens in even cubes from 4x4x4. Choose as front the part of the cross you want to fix.",
+                     "case_moves":"2(Rr) 2B 2U (Ll) 2U (Rr)' 2U (Rr) 2U 2F (Rr) 2F (Ll)' 2B 2(Rr)"
                   }
                ]
             },
             {
                "algorithm_id":"p6c",
                "algorithm_title":"Parity Four - Corners",
-               "algorithm_description":"lorem ipsum cube algorithm description",
+               "algorithm_description":"In this algorithm, R and L point only to the most external layer. (Rr) and (Ll) point to the three right and three left layers all together, respectively",
                "algorithm_cases":[
                   {
                      "case_name":"",
-                     "case_image":"/images/placeholder.jpg",
-                     "case_explanation":"lorem ipsum case explanation",
-                     "case_moves":"L B L 2F L' B' L 2F 2L"
+                     "case_image":"/images/four/parity_three.png",
+                     "case_explanation":"This algorithm is applied to fix the problem when you find 2 corners correct and 2 incorrect that happens in even cubes from 4x4x4. To apply it: first, the cube was reduced to a 3x3x3; second, F2L and the Yellow Cross was completed; third, the Yellow Cross was oriented. Now, if two corners are perfectly positioned but the other two are not (this case does not happen in odd cubes), this algorithm should solve the problem. WARNING: after completed this algorithm, the Yellow Cross orientation is broken and must be fixed.",
+                     "case_moves":"2r 2U 2r 2(Uu) 2r 2(Uu)"
                   }
                ]
             }

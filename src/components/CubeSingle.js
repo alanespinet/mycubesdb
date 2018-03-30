@@ -11,9 +11,13 @@ class CubeSingle extends React.Component {
     this.props.get_cube();
 
     return (
-      <div>
-        <CubeInfo cube={this.props.cube} />
-        <AlgorithmList cube={this.props.cube} />
+      <div className="cube-single">
+        <div className="container">
+          <CubeInfo cube={this.props.cube} />
+
+          <h3>Related Algorithms:</h3>  
+          <AlgorithmList cube={this.props.cube} />
+        </div>
       </div>
     );
   }
