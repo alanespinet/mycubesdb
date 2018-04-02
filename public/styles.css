@@ -49,9 +49,12 @@ img { display: block; }
   margin-top: 40px;
 }
 
+
 .cube-list ul li {
   flex-basis: 22%;
 }
+
+.cube-list .fill-element { opacity: 0; height: 0; }
 
 .container {
   width: 1200px;

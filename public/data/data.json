@@ -3,8 +3,8 @@
       {
          "cube_id":"x3cube",
          "cube_title":"3 x 3 x 3 (classic)",
-         "cube_image":"/images/placeholder_cube.png",
-         "cube_description":"This is the classic 3 x 3 x 3 cube.",
+         "cube_image":"/images/cubes/c3x3x3.png",
+         "cube_description":"This is the classic 3 x 3 x 3 Rubik's Cube. It counts of eight corners, eight edges and six static centers that act as rotational pivots. Each face has a color. Conventionally, the most known colors are: white, yellow, red, orange, green and blue. Each face's center determines the face's color. The puzzle is completed when all faces are filled with their colors only (there are not mixed colors in any face).",
          "cube_algorithms":[
             {
                "algorithm_id":"oll",
@@ -81,8 +81,8 @@
       {
          "cube_id":"x2cube",
          "cube_title":"2 x 2 x 2",
-         "cube_image":"/images/placeholder_cube.png",
-         "cube_description":"lorem ipsum cube description text",
+         "cube_image":"/images/cubes/c2x2x2.png",
+         "cube_description":"The 2 x 2 x 2 cube has no centers nor edges. It just has eight corners and rotates always using one of its three middle cuts. Colors can be obtain directly from the corners.",
          "cube_algorithms":[
             {
                "algorithm_id":"finalization",
@@ -102,8 +102,8 @@
       {
          "cube_id":"x4cube",
          "cube_title":"4 x 4 x 4",
-         "cube_image":"/images/placeholder_cube.png",
-         "cube_description":"lorem ipsum cube description text",
+         "cube_image":"/images/cubes/c4x4x4.png",
+         "cube_description":"Even cubes from 4 x 4 x 4 have one problem: they are no-center based higher order cubes. This means that the color patron must be known in order to solve the cube. The most common solving method is to reduce it to a 3 x 3 x 3 cube. Once this is done, however, some aberrations can occur that require the use of special algorithms.",
          "cube_algorithms":[
             {
                "algorithm_id":"p4me",
@@ -149,8 +149,8 @@
       {
          "cube_id":"x5cube",
          "cube_title":"5 x 5 x 5",
-         "cube_image":"/images/placeholder_cube.png",
-         "cube_description":"lorem ipsum cube description text",
+         "cube_image":"/images/cubes/c5x5x5.png",
+         "cube_description":"The 5 x 5 x 5 cube is very similar to the 4 x 4 x 4 cube, with one big difference: it is an odd cube, so it has centers and the colors must not be remember by heart in order to solve it. The most popular method to solve it is to reduce it to a 3 x 3 x 3 cube.",
          "cube_algorithms":[
             {
                "algorithm_id":"p5me",
@@ -183,8 +183,8 @@
       {
          "cube_id":"x6cube",
          "cube_title":"6 x 6 x 6",
-         "cube_image":"/images/placeholder_cube.png",
-         "cube_description":"lorem ipsum cube description text",
+         "cube_image":"/images/cubes/c6x6x6.png",
+         "cube_description":"Even cubes from 4 x 4 x 4 have one problem: they are no-center based higher order cubes. This means that the color patron must be known in order to solve the cube. The most common solving method is to reduce it to a 3 x 3 x 3 cube. Once this is done, however, some aberrations can occur that require the use of special algorithms.",
          "cube_algorithms":[
             {
                "algorithm_id":"p6ei",
@@ -235,6 +235,76 @@
                      "case_image":"/images/four/parity_three.png",
                      "case_explanation":"This algorithm is applied to fix the problem when you find 2 corners correct and 2 incorrect that happens in even cubes from 4x4x4. To apply it: first, the cube was reduced to a 3x3x3; second, F2L and the Yellow Cross was completed; third, the Yellow Cross was oriented. Now, if two corners are perfectly positioned but the other two are not (this case does not happen in odd cubes), this algorithm should solve the problem. WARNING: after completed this algorithm, the Yellow Cross orientation is broken and must be fixed.",
                      "case_moves":"2r 2U 2r 2(Uu) 2r 2(Uu)"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "cube_id":"x7cube",
+         "cube_title":"7 x 7 x 7",
+         "cube_image":"/images/cubes/c7x7x7.png",
+         "cube_description":"The 7 x 7 x 7 cube is very similar to the 6 x 6 x 6 cube, with one big difference: it is an odd cube, so it has centers and the colors must not be remember by heart in order to solve it. The most popular method to solve it is to reduce it to a 3 x 3 x 3 cube.",
+         "cube_algorithms":[
+            {
+               "algorithm_id":"p7ei",
+               "algorithm_title":"Parity One - Partial Edge Interchange",
+               "algorithm_description":"In this algorithm, L and R are relative to each other, and are always in the middle 5 lines. If L is the most left line of the 5-based center, R will be the most right line. If L is the most inner left line from the center, R will be the most inner right from the center.",
+               "algorithm_cases":[
+                  {
+                     "case_name":"",
+                     "case_image":"/images/five/parity_two.png",
+                     "case_explanation":"This case can happen when all edges are done but two and they have switched pieces in each edge that belong to the other. To apply this algorithm, the pieces that you want to switch must be up - front and right.",
+                     "case_moves":"L' 2U L' 2U 2F L' 2F R 2U R' 2U 2L"
+                  }
+               ]
+            },
+            {
+               "algorithm_id":"p7me",
+               "algorithm_title":"Parity Two - Mixed Edge Colors",
+               "algorithm_description":"In this algorithm, L and R are relative to each other, and are always in the middle 5 lines. If L is the most left line of the 5-based center, R will be the most right line. If L is the most inner left line from the center, R will be the most inner right from the center.",
+               "algorithm_cases":[
+                  {
+                     "case_name":"",
+                     "case_image":"/images/six/parity_two.png",
+                     "case_explanation":"This case can happen when all edges are done but two and one of them (or both) present the pieces incorrecty oriented. To apply this algorithm, the problematic edge should be on the top-front and in the right side.",
+                     "case_moves":"2R 2B 2U L 2U R' 2U R 2U 2F R 2F L' 2B 2R"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "cube_id":"pyraminx",
+         "cube_title":"Pyraminx",
+         "cube_image":"/images/cubes/pyraminx.png",
+         "cube_description":"The Pyraminx is not a cube, but a cuboid. It has a 4-side pyramid shape and its pieces are triangular. It is a very easy to solve cube.",
+         "cube_algorithms":[
+            {
+               "algorithm_id":"prfy",
+               "algorithm_title":"Finalization Moves",
+               "algorithm_description":"This algorithm occurs when the cube is being finalized. One done face is facing down, and the job is done in the middle layer.",
+               "algorithm_cases":[
+                  {
+                     "case_name":"Clockwise Permutation",
+                     "case_image":"/images/pyraminx/clockwise_permutation.png",
+                     "case_explanation":"The middle layer is completed by permuting the three pieces clockwise. The front face before applying the algorithm will be the one with two pieces of the same color and one different that has, at the same time, one face with all the three pieces of different colors on the left.",
+                     "case_moves":"R' L' U' L U R"
+                  }, {
+                     "case_name":"Counter-Clockwise Permutation",
+                     "case_image":"/images/pyraminx/counterclockwise_permutation.png",
+                     "case_explanation":"The middle layer is completed by permuting the three pieces counter-clockwise. The front face before applying the algorithm will be the one with two pieces of the same color and one different that has, at the same time, one face with all the three pieces of different colors on the right.",
+                     "case_moves":"L R U R' U' L'"
+                  }, {
+                     "case_name":"Turned Edges",
+                     "case_image":"/images/pyraminx/turned_edges.png",
+                     "case_explanation":"Only two pieces are wrong in the middle layer. Both of them are correctly positioned but incorrectly oriented. The front face will be the one with the two edges wrongly oriented.",
+                     "case_moves":"R' U L' U' L U' R U"
+                  }, {
+                     "case_name":"Two Wrong Colors in Each Face",
+                     "case_image":"/images/pyraminx/wrong_colors.png",
+                     "case_explanation":"All edges in the middle layer are wrong. Besides, in each face, there are two pieces with the same color and one different. Because all faces are equal, front face could be any of them.",
+                     "case_moves":"R' U' R U' R' U' R"
                   }
                ]
             }

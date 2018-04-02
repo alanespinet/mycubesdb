@@ -17,6 +17,7 @@ const CubeList = (props) => (
             </NavLink>
           </li>
         )}
+        <li class="fill-element"></li>
       </ul>
     </div>
   </div>
